@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .header{
+        text-align: center;
+        background-color:rgb(204, 173, 186) ;
+        padding-bottom: 50px;
+        padding-top: 40px;
+      }
+      .topnav{
+        background-color: grey;
+        overflow:hidden;
+        
+      }
+
+       .topnav .left a{
+         display: block;
+        text-decoration:none;
+        float: left;
+        padding:14px 20px;
+        color:lavenderblush;
+        text-align: center;
+      }
+      .left{
+        margin-left: 250px;
+      }
+      .topnav .right a{
+        display: block;
+        text-decoration:none;
+        float: right;
+        padding:14px 20px;
+        color:lavenderblush;
+        text-align: center;
+      }
+
+      .topnav a:hover {
+          background-color:mediumblue;
+          color: black;
+        }
+      .nav p{
+        color:mintcream;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        float:left;
+        text-align:center;
+        padding:14px 20px;
+      }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+  <h1>Admin Page</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+  <div class="search-container">
+    <form action="/action_page.php" class="cont">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search">Search</i></button>
+    </form>
+  </div>
+</div>
+
+<div class="topnav">
+  <div class="nav">
+    
+    {{#each data}}
+    <p>
+        Welcome! <strong>{{this.name}}</strong>
+    </p>
+    {{/each}}
+  </div>
+  <div class="left">
+    <a href="#">MyProfile</a>
+    <a href="/admin/user">Users</a>
+    <a href="#">Projects</a>
+    <a href="#">Departments</a>
+    <a href="#">Professors</a>
+    <a href="#">AboutUs</a>
+  </div>
+  
+  <div class="right"> 
+    <a href="/logout">Logout</a>
+  </div>
+  
+
+</div>
+    
+</body>
+</html>
